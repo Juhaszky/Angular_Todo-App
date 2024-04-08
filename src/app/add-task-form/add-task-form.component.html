@@ -1,0 +1,20 @@
+<div class="w-full">
+  <div class="flex flex-row flex-wrap sm:flex-nowrap w-full gap-3">
+    <div class="sm:w-3/5 w-full">
+      <input
+        class="border border-gray-300 p-2 w-full"
+        type="text"
+        pInputText
+        [(ngModel)]="value"
+      />
+    </div>
+    <div class="sm:w-2/5 w-full h-10">
+      <button
+        (click)="onAddTask()"
+        class="flex bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full items-center justify-center w-full h-full"
+      >
+        Add
+      </button>
+    </div>
+  </div>
+</div>

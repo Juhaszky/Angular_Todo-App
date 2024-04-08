@@ -1,6 +1,16 @@
 <div class="h-screen flex flex-row justify-center items-center">
-  <div class="flex w-2/4 h-2/4 border border-sky-500 relative">
-    <h2 class="absolute -top-8">Tasks</h2>
-      
+  <div class="sm:w-2/4 w-full sm:m-0 m-5 h-2/4 border-2 p-2 rounded-md border-sky-500 relative">
+    <div
+      class="flex-column flex-wrap w-full p-2 gap-3 h-full overflow-y-scroll"
+    >
+      <div class="w-full">
+        <h1 class="absolute -top-8 text-2xl">Tasks</h1>
+        <app-add-task-form class="w-full"></app-add-task-form>
+      </div>
+
+      <div class="w-full mt-5">
+        <app-task-list></app-task-list>
+      </div>
+    </div>
   </div>
 </div>

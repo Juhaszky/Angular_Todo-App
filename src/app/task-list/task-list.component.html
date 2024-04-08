@@ -1,0 +1,10 @@
+<div
+  *ngFor="let task of tasks$ | async; index as i"
+  class="w-full border border-gray-300 bg-slate-300 p-2 mb-2"
+>
+  <app-task
+    class="flex flex-row w-full flex-wrap flex-row space-between"
+    [taskValue]="task"
+    [taskIdx]="i"
+  ></app-task>
+</div>
