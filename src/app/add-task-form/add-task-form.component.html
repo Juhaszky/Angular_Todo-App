@@ -6,6 +6,7 @@
         type="text"
         pInputText
         [(ngModel)]="value"
+        (keyup.enter)="onAddTask()"
       />
     </div>
     <div class="sm:w-2/5 w-full h-10">

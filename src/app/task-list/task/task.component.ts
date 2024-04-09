@@ -23,6 +23,7 @@ export class TaskComponent {
 
   setEdit() {
     this.editable = true;
+    this.onSetFocus();
   }
 
   onAcceptModification(taskIdx: number): void {
@@ -34,5 +35,10 @@ export class TaskComponent {
       })
     );
     this.editable = false;
+  }
+  private onSetFocus() {
+    if (this.editable) {
+      this.inputField.nativeElement.focus();
+    }
   }
 }
