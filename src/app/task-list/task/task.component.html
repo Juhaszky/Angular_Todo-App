@@ -8,7 +8,7 @@
     [readOnly]="!editable"
     (keyup.enter)="onAcceptModification(taskIdx)"
   />
-  <div class="flex flex-1 gap-2">
+  <div class="flex flex-1 gap-2 w-full justify-end">
     <button
       *ngIf="editable"
       class="btn bg-green-600 hover:bg-green-700 p-2 rounded-md"
@@ -30,9 +30,9 @@
       </svg>
     </button>
     <button
-      class="btn bg-yellow-600 hover:bg-yellow-700 p-2 rounded-md"
+      class="btn p-2 rounded-md"
       (click)="setEdit()"
-      [ngClass]="{ 'hover:bg-yellow-700': !editable, 'bg-gray-500': editable }"
+      [ngClass]="editable ? 'bg-gray-500' : 'hover:bg-yellow-700 bg-yellow-600'"
       [disabled]="editable"
     >
       <svg
